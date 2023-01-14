@@ -1,0 +1,33 @@
+RR scheduling results (time slice is 1)
+time   cpu ready queue (tid/rst)
+----------------------------------
+  0  					--
+  1  					--
+  2  					--
+  3  		A4		--
+  4  		A3		--
+  5  		A2		--
+  6  		A1		--
+  7  					--
+  8  					--
+  9  					--
+ 10  		B4		C2
+ 11  		C2		B3
+ 12  		B3		C1
+ 13  		C1		B2
+ 14  		B2		--
+ 15  		B1		--
+
+        arrival service completion response wait
+tid     time    time    time       time     time
+---------------------------------------------
+ A			 3			  4				  7			    4		  0
+ B			10			  4				 16			    6		  2
+ C			10			  2				 14			    4		  2
+
+service wait
+ time   time
+------- ----
+2				2
+4				0
+4				2
